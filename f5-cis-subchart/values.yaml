@@ -1,5 +1,4 @@
 f5-cis:
-  namespace: cis
   args:
     bigip_url: 172.16.1.83
     bigip_partition: cis-argo-cd
