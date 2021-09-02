@@ -1,7 +1,8 @@
 #  Progetto devops gestito da Aditinet per le componenti:
-    F5-CIS
-    F5-Mcgw
-    NginxIngressController
+   
+ F5-CIS
+ F5-Mcgw
+ NginxIngressController
 
 Repository che contiene i sub chart helm  e i template di esempio per creare applicazioni Argo CD:
    f5-cis-subchart:
