@@ -1,5 +1,5 @@
 # folder contenente i file per le applicazioni Argo Cd
-Questa  helm sub chart directory contiene  i file Argo CD Application
+Questa  directory contiene  i file Argo CD Application
 
 Per ogni applicazione viene creato un file   applicazione.yaml, in questo file sono definiti i paramet
 che Argo CD usa per creare l'applicazione, ci sono alcuni parametri da modificare per  personalizzare l'applicazione
