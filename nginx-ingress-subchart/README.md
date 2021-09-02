@@ -19,7 +19,9 @@ Passi necessari per installare NginxIngressController:
 
 
 1.) modifica valori dei file Chart.yaml, values.yaml
+
 2.) modifica i valori del file nginx-ingress-controller.yaml nella cartella argocd-apps
+
 4.) Installa l'applicazione mediante il comando
 
    - kubectl create -f nginx-ingress-controller.yaml 
