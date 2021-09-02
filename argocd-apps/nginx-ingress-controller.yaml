@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ginx-ingress-subchart
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: nginx-ingress-controller
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: nginx-ingress-subchart/
+    repoURL: https://github.com/musa-osmani/devops-examples
+    targetRevision: main
+  sync:
+    comparedTo:
+      destination:
+        namespace: nginx-ingress-controller
+        server: https://kubernetes.default.svc
+      source:
+        path: nginx-ingress-subchart/
+        repoURL: https://github.com/musa-osmani/devops-examples
+        targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
