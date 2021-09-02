@@ -1,0 +1,10 @@
+nginx-ingress:
+  controller:
+    image:
+      repository: aditidoc/nginxplusappp
+      tag: 1.11.1
+    config:
+      entries: { proxy-protocol: "True" ,real-ip-header: "proxy_protocol",set-real-ip-from: "0.0.0.0/0"}
+    service:
+      type: LoadBalancer
+      customports: [{port: 8081, name: readiness-port, protocol: TCP}]
