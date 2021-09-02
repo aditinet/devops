@@ -1,0 +1,5 @@
+mcgw:
+  replicaCount: 1
+  image:
+     repository: aditidoc/nginxmcgw
+     tag: "latest"

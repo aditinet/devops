@@ -1,24 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ginx-ingress-subchart
+  name: mcgw-subchart
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: nginx-ingress-controller
+    namespace: mcgw
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: nginx-ingress-subchart/
+    path: mcgw-subchart/
     repoURL: https://github.com/aditinet/devops
     targetRevision: main
   sync:
     comparedTo:
       destination:
-        namespace: nginx-ingress-controller
+        namespace: mcgw
         server: https://kubernetes.default.svc
       source:
-        path: nginx-ingress-subchart/
+        path: mcgw-subchart/
         repoURL: https://github.com/aditinet/devops
         targetRevision: main
   syncPolicy:
