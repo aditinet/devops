@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: mcgw-subchart/
+    path: nginx-mcgw-subchart/
     repoURL: https://github.com/aditinet/devops
     targetRevision: main
   sync:
@@ -18,7 +18,7 @@ spec:
         namespace: mcgw
         server: https://kubernetes.default.svc
       source:
-        path: mcgw-subchart/
+        path: nginx-mcgw-subchart/
         repoURL: https://github.com/aditinet/devops
         targetRevision: main
   syncPolicy:
