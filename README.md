@@ -4,7 +4,8 @@
   - F5-MCGW
   - F5-NginxIngressController
   
-   
+ Sotto la descrizione della cartella e il contenuto: 
+ 
   - f5-cis-subchart:
    
      contiene i file Chart.yaml, values.yaml.In questi file viene definita la dipendenza
