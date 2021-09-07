@@ -3,3 +3,51 @@ mcgw:
   image:
      repository: aditidoc/nginxmcgw
      tag: "latest"
+  service:
+    type: ClusterIP
+    port: 80
+    APIport: 8080  
+  
+  ingress:
+    enabled: true
+  annotations:
+    nginx.org/proxy-connect-timeout: "30s"
+    nginx.org/proxy-read-timeout: "20s"
+    nginx.org/client-max-body-size: "4m"
+    nginx.com/health-checks: "true"
+
+  ingressClassName: nginx
+
+  hosts:
+    - host: mcgw.f5.ff.lan
+      paths:
+        - path: /
+          pathType: Prefix
+          name: nginx-mcgw
+          port: 80
+
+    - host: api.mcgw.f5.ff.lan
+      paths:
+        - path: /
+          pathType: Prefix
+          name: nginx-mcgw
+          port: 8080
+
+    - host: api.isp.com
+      paths:
+        - path: /
+          pathType: Prefix
+          name: nginx-mcgw
+          port: 80
+  tls:
+    - secretName: mcgw.f5.ff.lan
+      hosts:
+        - mcgw.f5.ff.lan
+        - api.mcgw.f5.ff.lan
+secret:
+  secretName: mcgw.f5.ff.lan
+
+configmapAPI:
+  APIPort: 8080
+  APIHostname: api.mcgw.f5.ff.lan
+  AllowCIDR: "0.0.0.0  
