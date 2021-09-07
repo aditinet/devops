@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ginx-ingress-subchart
+  name: nginx-ingress-subchart
   namespace: openshift-gitops
 spec:
   destination:
