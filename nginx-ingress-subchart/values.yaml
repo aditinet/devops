@@ -1,5 +1,6 @@
 nginx-ingress:
   controller:
+    nginxplus: true
     image:
       repository: aditidoc/nginxplusappp
       tag: 1.11.1
