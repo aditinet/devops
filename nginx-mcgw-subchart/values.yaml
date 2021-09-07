@@ -50,4 +50,4 @@ secret:
 configmapAPI:
   APIPort: 8080
   APIHostname: api.mcgw.f5.ff.lan
-  AllowCIDR: "0.0.0.0  
+  AllowCIDR: "0.0.0.0"
