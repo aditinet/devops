@@ -6,6 +6,6 @@ nginx-ingress:
       tag: 1.11.1
     #config:
       #entries: { proxy-protocol: "True" ,real-ip-header: "proxy_protocol",set-real-ip-from: "0.0.0.0/0"}
-    service:
-      type: NodePort
-      customports: [{port: 8081, name: readiness-port, protocol: TCP}]
+    #service:
+    #  type: NodePort
+    #  customports: [{port: 8081, name: readiness-port, protocol: TCP}]
