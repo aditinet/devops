@@ -1,6 +1,6 @@
 f5-cis:
   args:
-    bigip_url: 172.16.1.83
+    bigip_url: https://172.16.1.83
     bigip_partition: cis-argo-cd
     pool_member_type: NodePort
     insecure: true
