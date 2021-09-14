@@ -51,3 +51,14 @@ configmapAPI:
   APIPort: 8080
   APIHostname: api.mcgw.f5.ff.lan
   AllowCIDR: "0.0.0.0"
+
+MCGW:
+  DBBackend:
+    name: mcgw-test-backend-db
+    port: 5000
+  Server:
+    ResolverAddr: 8.8.8.8
+    Port: 80
+  LocdbQuery:
+    Hostheader: mdg-datagrid-default-api-mdg-svil.apps.vcptoisp001s.intesasanpaolo.com
+
