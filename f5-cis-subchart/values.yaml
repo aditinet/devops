@@ -1,6 +1,6 @@
 cis:
    args:
-     bigip_partition: cis-helm
      bigip_url: 172.16.1.83
+     bigip_partition: cis-helm
      insecure: true
      pool_member_type: nodeport
