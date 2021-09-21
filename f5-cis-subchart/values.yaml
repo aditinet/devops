@@ -1,6 +1,5 @@
-cis:
-   args:
-     bigip_url: https://172.16.1.83:443
-     bigip_partition: cis-helm
-     pool_member_type: nodeport
-     insecure: true
+args:
+  bigip_url: 172.16.1.83
+  bigip_partition: cis-helm
+  pool_member_type: nodeport
+  insecure: true
