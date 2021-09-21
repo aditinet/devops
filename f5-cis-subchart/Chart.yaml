@@ -6,4 +6,4 @@ appVersion: "1.0.0"
 dependencies:
 - name: f5-bigip-ctlr
   version: 0.0.14
-  repository: "http://172.16.1.127/charts/stable/"
+  repository: "http://172.28.255.231/stable"
