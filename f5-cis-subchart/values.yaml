@@ -21,7 +21,7 @@ args:
   # NOTE: helm has difficulty with values using `-`; `_` are used for naming
   # and are replaced with `-` during rendering.
   # REQUIRED Params
-  bigip_url:
+  bigip_url: 172.16.1.83
   bigip_partition: testpartition
   # OPTIONAL PARAMS -- uncomment and provide values for those you wish to use.
   # verify_interval:
