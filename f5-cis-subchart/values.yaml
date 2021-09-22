@@ -1,6 +1,7 @@
-args:
-   bigipURL: "172.16.1.83"
-   bigipPartition: "arcocd"
-   PoolMemberType: "nodeport"
-   Insecure: true
-   CRD: true
+cis:
+  args:
+     bigipURL: "172.16.1.83"
+     bigipPartition: "arcocd"
+     PoolMemberType: "nodeport"
+     Insecure: true
+     CRD: true
