@@ -1,4 +1,4 @@
 namespace: f5-cis
 args:
-  bigip_url: "172.16.1.83"
-  bigip_partition: "argocd"
+  bigip_url: 172.16.1.83
+  bigip_partition: argocd
