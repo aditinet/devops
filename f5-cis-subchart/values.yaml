@@ -1,33 +1,7 @@
-args:
-  # See http://clouddocs.f5.com/products/connectors/k8s-bigip-ctlr/latest/#controller-configuration-parameters
-  # NOTE: helm has difficulty with values using `-`; `_` are used for naming
-  # and are replaced with `-` during rendering.
-  # REQUIRED Params
-  bigip_url: https://172.28.255.213:443
-  bigip_partition: cis-argocd
-  # OPTIONAL PARAMS -- uncomment and provide values for those you wish to use.
-  # verify_interval:
-  # node-poll_interval:
-  # log_level:
-  # python_basedir: ~
-  # VXLAN
-  # openshift_sdn_name:
-  # flannel_name:
-  # KUBERNETES
-  # default_ingress_ip:
-  # kubeconfig:
-  # namespaces: ["foo", "bar"]
-  # namespace_label:
-  # node_label_selector:
-  pool_member_type: nodeport
-  # resolve_ingress_names:
-  # running_in_cluster:
-  # use_node_internal:
-  # use_secrets:
-  insecure: true
-  custom-resource-mode: true
-  # log-as3-response: true
-  # gtm-bigip-password
-  # gtm-bigip-url
-  # gtm-bigip-username
-  # ipam : true
+f5-bigip-ctlr:
+  args:
+    bigip_url: https://172.28.255.213:443
+    bigip_partition: cis-argocd
+    pool_member_type: nodeport
+    insecure: true
+    custom-resource-mode: true
