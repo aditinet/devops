@@ -1,5 +1,10 @@
 mcgw:
   replicaCount: 1
+  
+  securityContext:
+  allowPrivilegeEscalation: false
+  runAsUser: 0 #nginx
+  
   image:
      repository: aditidoc/nginxmcgw
      tag: "latest"
