@@ -24,21 +24,21 @@ mcgw:
   ingressClassName: nginx
 
   hosts:
-    - host: mcgw.f5.ff.lan
+    - host: mcgw.aditinet.local
       paths:
         - path: /
           pathType: Prefix
           name: nginx-mcgw
           port: 80
 
-    - host: api.mcgw.f5.ff.lan
+    - host: api.mcgw.aditinet.local
       paths:
         - path: /
           pathType: Prefix
           name: nginx-mcgw
           port: 8080
 
-    - host: api.isp.com
+    - host: api.aditinet.local
       paths:
         - path: /
           pathType: Prefix
@@ -54,7 +54,7 @@ secret:
 
 configmapAPI:
   APIPort: 8080
-  APIHostname: api.mcgw.f5.ff.lan
+  APIHostname: api.mcgw.aditinet.local
   AllowCIDR: "0.0.0.0"
 
 MCGW:
