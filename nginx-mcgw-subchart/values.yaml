@@ -25,35 +25,36 @@ mcgw:
   LocdbQuery:
     Hostheader: mdg-datagrid-default-api-mdg-svil.apps.vcptoisp001s.***.com
   ingress:
-  enabled: true
-  annotations:
-    nginx.org/proxy-connect-timeout: "30s"
-    nginx.org/proxy-read-timeout: "20s"
-    nginx.org/client-max-body-size: "4m"
-    nginx.com/health-checks: "true"
-  ingressClassName: nginx
-  hosts:
-    - host: mcgw.aditinet.lab
-      paths:
-        - path: /
-          pathType: Prefix
-          name: nginx-mcgw
-          port: 80
-    - host: api.mcgw.aditinet-lab
-      paths:
-        - path: /
-          pathType: Prefix
-          name: nginx-mcgw
-          port: 8080
-    - host: api.intesasanpaolo.com
-      paths:
-        - path: /
-          pathType: Prefix
-          name: nginx-mcgw
-          port: 80
-  tls:
-    - secretName: mcgw.f5.ff.lan
-      hosts:
-        - mcgw.f5.ff.lan
-        - api.mcgw.f5.ff.lan
-        - api.intesasanpaolo.com
+    enabled: true
+    annotations:
+      nginx.org/proxy-connect-timeout: "30s"
+      nginx.org/proxy-read-timeout: "20s"
+      nginx.org/client-max-body-size: "4m"
+      nginx.com/health-checks: "true"
+    ingressClassName: nginx
+    hosts:
+      - host: mcgw.aditinet.lab
+        paths:
+          - path: /
+            pathType: Prefix
+            name: nginx-mcgw
+            port: 80
+      - host: api.mcgw.aditinet-lab
+        paths:
+          - path: /
+            pathType: Prefix
+            name: nginx-mcgw
+            port: 8080
+      - host: api.intesasanpaolo.com
+        paths:
+          - path: /
+            pathType: Prefix
+            name: nginx-mcgw
+            port: 80
+    tls:
+      - secretName: mcgw.f5.ff.lan
+        hosts:
+          - mcgw.f5.ff.lan
+          - api.mcgw.f5.ff.lan
+          - api.intesasanpaolo.com
+          
