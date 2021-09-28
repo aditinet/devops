@@ -1,10 +1,8 @@
 mcgw:
   replicaCount: 1
-  
   securityContext:
   allowPrivilegeEscalation: false
   runAsUser: 0 #nginx
-  
   image:
      repository: aditidoc/nginxmcgw
      tag: "latest"
@@ -12,7 +10,6 @@ mcgw:
     type: ClusterIP
     port: 80
     APIport: 8080  
-  
   ingress:
     enabled: true
   annotations:
@@ -20,9 +17,7 @@ mcgw:
     nginx.org/proxy-read-timeout: "20s"
     nginx.org/client-max-body-size: "4m"
     nginx.com/health-checks: "true"
-
   ingressClassName: nginx
-
   hosts:
     - host: mcgw.aditinet.local
       paths:
@@ -30,14 +25,12 @@ mcgw:
           pathType: Prefix
           name: nginx-mcgw
           port: 80
-
     - host: api.mcgw.aditinet.local
       paths:
         - path: /
           pathType: Prefix
           name: nginx-mcgw
           port: 8080
-
     - host: api.aditinet.local
       paths:
         - path: /
@@ -66,4 +59,3 @@ MCGW:
     Port: 80
   LocdbQuery:
     Hostheader: mdg-datagrid-default-api-mdg-svil.apps.vcptoisp001s.***.com
-
