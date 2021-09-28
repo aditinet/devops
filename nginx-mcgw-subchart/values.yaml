@@ -10,8 +10,22 @@ mcgw:
     type: ClusterIP
     port: 80
     APIport: 8080  
+  configmapAPI:
+    APIPort: 8080
+    APIHostname: api.mcgw.aditinet.local
+    AllowCIDR: "0.0.0.0"
+
+  MCGW:
+    DBBackend:
+      name: mcgw-test-backend-db
+      port: 5000
+  Server:
+    ResolverAddr: 8.8.8.8
+    Port: 80
+  LocdbQuery:
+    Hostheader: mdg-datagrid-default-api-mdg-svil.apps.vcptoisp001s.***.com
   ingress:
-    enabled: true
+  enabled: true
   annotations:
     nginx.org/proxy-connect-timeout: "30s"
     nginx.org/proxy-read-timeout: "20s"
@@ -19,19 +33,19 @@ mcgw:
     nginx.com/health-checks: "true"
   ingressClassName: nginx
   hosts:
-    - host: mcgw.aditinet.local
+    - host: mcgw.aditinet.lab
       paths:
         - path: /
           pathType: Prefix
           name: nginx-mcgw
           port: 80
-    - host: api.mcgw.aditinet.local
+    - host: api.mcgw.aditinet-lab
       paths:
         - path: /
           pathType: Prefix
           name: nginx-mcgw
           port: 8080
-    - host: api.aditinet.local
+    - host: api.intesasanpaolo.com
       paths:
         - path: /
           pathType: Prefix
@@ -42,20 +56,4 @@ mcgw:
       hosts:
         - mcgw.f5.ff.lan
         - api.mcgw.f5.ff.lan
-secret:
-  secretName: mcgw.f5.ff.lan
-
-configmapAPI:
-  APIPort: 8080
-  APIHostname: api.mcgw.aditinet.local
-  AllowCIDR: "0.0.0.0"
-
-MCGW:
-  DBBackend:
-    name: mcgw-test-backend-db
-    port: 5000
-  Server:
-    ResolverAddr: 8.8.8.8
-    Port: 80
-  LocdbQuery:
-    Hostheader: mdg-datagrid-default-api-mdg-svil.apps.vcptoisp001s.***.com
+        - api.intesasanpaolo.com
