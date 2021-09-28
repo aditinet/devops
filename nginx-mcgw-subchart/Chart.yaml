@@ -5,5 +5,5 @@ version: 1.0.0
 appVersion: "1.0.0"
 dependencies:
 - name: mcgw
-  version: 0.1.0
+  version: 0.1.1
   repository: "http://172.28.255.231/stable"
