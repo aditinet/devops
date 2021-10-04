@@ -45,7 +45,7 @@ mcgw:
             pathType: Prefix
             name: nginx-mcgw
             port: 8080
-      - host: api.intesasanpaolo.com
+      - host: api.aditinetlab.com
         paths:
           - path: /
             pathType: Prefix
@@ -56,5 +56,5 @@ mcgw:
         hosts:
           - mcgw.f5.ff.lan
           - api.mcgw.f5.ff.lan
-          - api.intesasanpaolo.com
+          - api.aditinetlab.com
           
