@@ -34,36 +34,25 @@ mcgw:
     ingressClassName: nginx
     hosts:
       - host: "mcgw.aditinet.lab"
-          http:
-            paths:
-            - pathType: Prefix
-              path: "/"
-              backend:
-                service:
-                  name: nginx-mcgw
-                  port:
-                    number: 80
+        paths:
+          - path: /
+            pathType: Prefix
+            name: nginx-mcgw
+            port: 80
       - host: api.mcgw.aditinet.lab
-          http:
-            paths:
-            - pathType: Prefix
-              path: "/"
-              backend:
-                service:
-                  name: nginx-mcgw
-                  port:
-                    number: 8080
+        paths:
+          - path: /
+            pathType: Prefix
+            name: nginx-mcgw
+            port: 8080
+         
         
       - host: api.aditinetlab.com
-          http:
-            paths:
-            - pathType: Prefix
-              path: "/"
-              backend:
-                service:
-                  name: nginx-mcgw
-                  port:
-                    number: 80
+        paths:
+          - path: /
+            pathType: Prefix
+            name: nginx-mcgw
+            port: 80
     tls:
       - secretName: mcgw.f5.ff.lan
         hosts:
