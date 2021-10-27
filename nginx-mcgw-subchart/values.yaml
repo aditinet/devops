@@ -7,7 +7,7 @@ mcgw:
      repository: aditidoc/nginxmcgw
      tag: "latest"
   service:
-    type: ClusterIP
+    type: NodePort
     port: 80
     APIport: 8080  
   configmapAPI:
