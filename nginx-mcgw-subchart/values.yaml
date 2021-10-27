@@ -9,7 +9,7 @@ mcgw:
   service:
     type: NodePort
     port: 80
-    APIport: 8080  
+  
   configmapAPI:
     APIPort: 8080
     APIHostname: api.mcgw.aditinet.it
