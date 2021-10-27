@@ -37,20 +37,29 @@ mcgw:
         paths:
           - path: /
             pathType: Prefix
-            name: nginx-mcgw
-            port: 80
+            backend:
+              service:
+                name: nginx-mcgw
+                port: 
+                  number: 80
       - host: api.mcgw.aditinet-lab
         paths:
           - path: /
             pathType: Prefix
-            name: nginx-mcgw
-            port: 8080
+            backend:
+              service:
+                name: nginx-mcgw
+                port: 
+                  number: 8080
       - host: api.aditinetlab.com
         paths:
           - path: /
             pathType: Prefix
-            name: nginx-mcgw
-            port: 80
+            backend:
+              service:
+                name: nginx-mcgw
+                port: 
+                  number: 80
     tls:
       - secretName: mcgw.f5.ff.lan
         hosts:
