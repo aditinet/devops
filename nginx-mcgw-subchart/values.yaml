@@ -6,9 +6,6 @@ mcgw:
   image:
      repository: aditidoc/nginxmcgw
      tag: "latest"
-  service:
-    type: nodeport
-    port: 80
   
   configmapAPI:
     APIPort: 8080
