@@ -12,18 +12,25 @@ mcgw:
     APIport: 8080  
   configmapAPI:
     APIPort: 8080
-    APIHostname: api.mcgw.aditinet.local
+    APIHostname: api.mcgw.aditinet.it
     AllowCIDR: "0.0.0.0"
 
   MCGW:
+    createUpstreamsConfigMap: true
     DBBackend:
       name: mcgw-test-backend-db
       port: 5000
-  Server:
-    ResolverAddr: 8.8.8.8
-    Port: 80
-  LocdbQuery:
-    Hostheader: mdg-datagrid-default-api-mdg-svil.apps.vcptoisp001s.***.com
+      tenant:
+        name: adc
+        group:
+          name: mcgw
+          bucket:
+            name: mcgw
+    Server:
+      ResolverAddr: 8.8.8.8
+      Port: 80
+    LocdbQuery:
+      Hostheader: mdg-datagrid-default-api-mdg-svil.apps.vcptoisp001s.intesasanpaolo.com
   ingress:
     enabled: true
     annotations:
