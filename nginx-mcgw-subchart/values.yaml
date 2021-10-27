@@ -7,7 +7,7 @@ mcgw:
      repository: aditidoc/nginxmcgw
      tag: "latest"
   service:
-    type: NodePort
+    type: nodeport
     port: 80
   
   configmapAPI:
