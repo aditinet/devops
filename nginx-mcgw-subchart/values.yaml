@@ -1,17 +1,4 @@
 mcgw:
-  replicaCount: 1
-  securityContext:
-  allowPrivilegeEscalation: true
-  runAsUser: 0 #nginx
-  image:
-     repository: aditidoc/nginxmcgw
-     tag: "latest"
-  
-  configmapAPI:
-    APIPort: 8080
-    APIHostname: api.mcgw.aditinet.it
-    AllowCIDR: "0.0.0.0"
-
   MCGW:
     DBBackend:
       name: 172.28.255.231
@@ -21,42 +8,3 @@ mcgw:
       Port: 80
     LocdbQuery:
       Hostheader: mdg-datagrid-default-api-mdg-svil.apps.vcptoisp001s.intesasanpaolo.com
-
-   
-   
-  ingress:
-    enabled: true
-    annotations:
-      nginx.org/proxy-connect-timeout: "30s"
-      nginx.org/proxy-read-timeout: "20s"
-      nginx.org/client-max-body-size: "4m"
-      nginx.com/health-checks: "true"
-    ingressClassName: nginx
-    hosts:
-      - host: "mcgw.aditinet.lab"
-        paths:
-          - path: /
-            pathType: Prefix
-            name: mcgw
-            port: 80
-      - host: api.mcgw.aditinet.lab
-        paths:
-          - path: /
-            pathType: Prefix
-            name: mcgw
-            port: 8080
-         
-        
-      - host: api.aditinetlab.com
-        paths:
-          - path: /
-            pathType: Prefix
-            name: -mcgw
-            port: 80
-    tls:
-      - secretName: mcgw.f5.ff.lan
-        hosts:
-          - mcgw.f5.ff.lan
-          - api.mcgw.f5.ff.lan
-          - api.aditinetlab.com
-          
