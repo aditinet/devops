@@ -13,21 +13,16 @@ mcgw:
     AllowCIDR: "0.0.0.0"
 
   MCGW:
-    createUpstreamsConfigMap: true
     DBBackend:
       name: 172.28.255.231
       port: 5000
-      tenant:
-        name: adc
-        group:
-          name: mcgw
-          bucket:
-            name: mcgw
     Server:
       ResolverAddr: 8.8.8.8
       Port: 80
     LocdbQuery:
       Hostheader: mdg-datagrid-default-api-mdg-svil.apps.vcptoisp001s.intesasanpaolo.com
+   
+   
   ingress:
     enabled: true
     annotations:
