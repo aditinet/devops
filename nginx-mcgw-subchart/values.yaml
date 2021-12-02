@@ -15,7 +15,7 @@ mcgw:
   MCGW:
     createUpstreamsConfigMap: true
     DBBackend:
-      name: mcgw-test-backend-db
+      name: 172.28.255.231
       port: 5000
       tenant:
         name: adc
