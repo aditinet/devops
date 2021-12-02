@@ -1,7 +1,7 @@
 mcgw:
   replicaCount: 1
   securityContext:
-  allowPrivilegeEscalation: false
+  allowPrivilegeEscalation: true
   runAsUser: 0 #nginx
   image:
      repository: aditidoc/nginxmcgw
