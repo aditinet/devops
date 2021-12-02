@@ -2,8 +2,8 @@ apiVersion: v2
 name: mcgw
 type: application
 version: 1.0.0
-appVersion: "1.0.0"
+appVersion: "1.16.0"
 dependencies:
-- name: isp-adc-mcgw
-  version: 0.1.2
+- name: mcgw-0.1.0.tgz
+  version: 0.1.0
   repository: "http://172.28.255.231/stable"
