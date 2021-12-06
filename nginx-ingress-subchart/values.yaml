@@ -9,3 +9,4 @@ nginx-ingress:
     service:
       type: NodePort
     #  customports: [{port: 8081, name: readiness-port, protocol: TCP}]
+    enableSnippets: true
