@@ -1,10 +1,10 @@
 mcgw:
   MCGW:
     DBBackend:
-      name: 172.28.255.231
+      name: mcgw-test-backend-db-serv
       port: 5000
     Server:
       ResolverAddr: 8.8.8.8
       Port: 80
     LocdbQuery:
-      Hostheader: mdg-datagrid-default-api-mdg-svil.apps.vcptoisp001s.intesasanpaolo.com
+      Hostheader: somehostheader
