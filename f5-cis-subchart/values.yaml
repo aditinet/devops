@@ -1,7 +1,7 @@
 f5-bigip-ctlr:
   namespace: f5-cis
   args:
-    bigip_url: https://172.28.255.213:443
+    bigip_url: https://172.16.1.83:443
     bigip_partition: cis-argocd
     pool_member_type: nodeport
     insecure: true
