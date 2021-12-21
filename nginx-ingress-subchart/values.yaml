@@ -8,5 +8,6 @@ nginx-ingress:
       #entries: { proxy-protocol: "True" ,real-ip-header: "proxy_protocol",set-real-ip-from: "0.0.0.0/0"}
     service:
       type: NodePort
+      extraLabels: {cis.f5.com/as3-tenant: dmttoisp002t, cis.f5.com/as3-app: dmttoisp003t_app , cis.f5.com/as3-pool: dmttoisp002t_pool}
     #  customports: [{port: 8081, name: readiness-port, protocol: TCP}]
     enableSnippets: true
