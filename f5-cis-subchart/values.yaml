@@ -6,5 +6,5 @@ f5-bigip-ctlr:
     pool_member_type: nodeport
     insecure: true
     custom-resource-mode: false
-    log_level: error
+    log_level: debug
   version: latest
