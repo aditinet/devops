@@ -1,4 +1,4 @@
-nginx-ingress:
+ctrl:
   controller:
     nginxplus: true
     image:
