@@ -7,5 +7,6 @@ f5-bigip-ctlr:
     insecure: true
     custom-resource-mode: false
     log_level: error
+    hubmode: true
     agent: as3
   version: latest
