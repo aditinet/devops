@@ -1,5 +1,6 @@
 ctrl:
   controller:
+    enableSnippets: true
     nginxplus: true
     image:
       repository: aditidoc/kic
@@ -8,6 +9,6 @@ ctrl:
       #entries: { proxy-protocol: "True" ,real-ip-header: "proxy_protocol",set-real-ip-from: "0.0.0.0/0"}
     service:
       type: NodePort
-      extraLabels: {cis.f5.com/as3-tenant: Nginx_IC, cis.f5.com/as3-app: Nginx_IC_vs , cis.f5.com/as3-pool: Nginx_IC_pool}
+    #  extraLabels: {cis.f5.com/as3-tenant: Nginx_IC, cis.f5.com/as3-app: Nginx_IC_vs , cis.f5.com/as3-pool: Nginx_IC_pool}
     #  customports: [{port: 8081, name: readiness-port, protocol: TCP}]
     enableSnippets: true
