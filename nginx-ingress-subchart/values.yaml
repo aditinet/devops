@@ -1,6 +1,5 @@
-ctrl:
+nginx-ingress:
   controller:
-    enableSnippets: true
     nginxplus: true
     image:
       repository: aditidoc/kic
