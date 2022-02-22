@@ -6,7 +6,7 @@ f5-bigip-ctlr:
     pool_member_type: nodeport
     insecure: true
     custom-resource-mode: true
-    log_level: error
+    log_level: debug
     hubmode: true
     agent: as3
   version: latest
