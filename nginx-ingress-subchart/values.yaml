@@ -14,7 +14,7 @@ nginx-ingress:
     service:
       type: NodePort
       extraLabels: { app: ingresslink }
-      customports: [{port: 8081, name: readiness-port, protocol: TCP}]
+      customports: [{name: readiness-port,port: 8081, protocol: TCP}]
     reportIngressStatus:
       enable: true
       ingressLink: "ingresslink"
