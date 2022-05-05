@@ -4,8 +4,8 @@ nginx-ingress:
     image:
       repository: aditidoc/kic
       tag: 2.0.3-SNAPSHOT-66e69fe
-    #config:
-      #entries: { proxy-protocol: "True" ,real-ip-header: "proxy_protocol",set-real-ip-from: "0.0.0.0/0"}
+    config:
+      entries: { proxy-protocol: "True" ,real-ip-header: "proxy_protocol",set-real-ip-from: "0.0.0.0/0"}
     service:
       type: NodePort
     #  extraLabels: {cis.f5.com/as3-tenant: Nginx_IC, cis.f5.com/as3-app: Nginx_IC_vs , cis.f5.com/as3-pool: Nginx_IC_pool}
