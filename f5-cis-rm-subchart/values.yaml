@@ -1,5 +1,5 @@
 f5-bigip-ctlr-rm:
-  namespace: f5-cis
+  namespace: f5-cis-rm
   args:
     bigip_url: https://172.16.1.83:443
     bigip_partition: cis-cl-mi
