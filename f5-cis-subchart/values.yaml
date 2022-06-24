@@ -7,6 +7,6 @@ f5-bigip-ctlr:
     insecure: true
     custom-resource-mode: false
     log_level: debug
-    hubmode: true
+    hubmode: false
     agent: as3
   version: 2.7.1
