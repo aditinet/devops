@@ -11,6 +11,7 @@ nginx-ingress:
       tag: 2.0.3-SNAPSHOT-66e69fe
     config:
       entries: { proxy-protocol: "True" ,real-ip-header: "proxy_protocol",set-real-ip-from: "0.0.0.0/0"}
+      annotations: {nginx.org/redirect-to-https: true}
     service:
       httpPort:
         enable: true
