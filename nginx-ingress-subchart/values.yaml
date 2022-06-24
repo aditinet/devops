@@ -13,7 +13,7 @@ nginx-ingress:
       entries: { proxy-protocol: "True" ,real-ip-header: "proxy_protocol",set-real-ip-from: "0.0.0.0/0"}
     service:
       httpPort:
-        enable: false
+        enable: true
       type: NodePort
       #extraLabels: { app: ingresslink }
       extraLabels: {cis.f5.com/as3-tenant: ISP-AS3, cis.f5.com/as3-app: servizio-multiporta , cis.f5.com/as3-pool: adc-pool}
