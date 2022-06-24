@@ -5,7 +5,7 @@ f5-bigip-ctlr:
     bigip_partition: cis-cl-mi
     pool_member_type: nodeport
     insecure: true
-    #custom-resource-mode: true
+    custom-resource-mode: false
     log_level: error
     hubmode: true
     agent: as3
