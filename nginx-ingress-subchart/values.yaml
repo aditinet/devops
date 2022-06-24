@@ -16,7 +16,7 @@ nginx-ingress:
         enable: true
       type: NodePort
       #extraLabels: { app: ingresslink }
-      extraLabels: {cis.f5.com/as3-tenant: ISP-AS3, cis.f5.com/as3-app: servizio-multiporta , cis.f5.com/as3-pool: adc-pool}
+      extraLabels: {cis.f5.com/as3-tenant: ISPAS3, cis.f5.com/as3-app: serviziomultiporta , cis.f5.com/as3-pool: adcpool}
       customPorts: [{name: readiness-port,port: 8081, protocol: TCP}]
     #reportIngressStatus:
     #  enable: true
