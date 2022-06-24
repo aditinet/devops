@@ -3,7 +3,7 @@ f5-bigip-ctlr:
   args:
     bigip_url: https://172.28.255.213:443
     bigip_partition: cis-cl-mi
-    pool_member_type: nodeport
+    pool_member_type: cluster
     insecure: true
     custom-resource-mode: false
     log_level: debug
