@@ -12,6 +12,8 @@ nginx-ingress:
     config:
       entries: { proxy-protocol: "True" ,real-ip-header: "proxy_protocol",set-real-ip-from: "0.0.0.0/0"}
     service:
+      httpPort:
+        enable: false
       type: NodePort
       extraLabels: { app: ingresslink }
       customPorts: [{name: readiness-port,port: 8081, protocol: TCP}]
