@@ -10,14 +10,14 @@ nginx-ingress:
       repository: aditidoc/kic
       tag: 2.0.3-SNAPSHOT-66e69fe
     config:
-      entries: { proxy-protocol: "True" ,real-ip-header: "proxy_protocol",set-real-ip-from: "0.0.0.0/0"}
+      #entries: { proxy-protocol: "True" ,real-ip-header: "proxy_protocol",set-real-ip-from: "0.0.0.0/0"}
     service:
-      httpPort:
-        enable: true
-      type: NodePort
+      #httpPort:
+      #  enable: true
+      #type: NodePort
       #extraLabels: { app: ingresslink }
       extraLabels: {cis.f5.com/as3-tenant: Nginx_IC, cis.f5.com/as3-app: Nginx_IC_vs , cis.f5.com/as3-pool: Nginx_IC_pool}
-      customPorts: [{name: readiness-port,port: 8081, protocol: TCP}]
+      #customPorts: [{name: readiness-port,port: 8081, protocol: TCP}]
     #reportIngressStatus:
     #  enable: true
     #  ingressLink: "ingresslink"
