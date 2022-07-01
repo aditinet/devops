@@ -14,7 +14,8 @@ nginx-ingress:
     service:
       type: NodePort
       #extraLabels: { app: ingresslink }
-      extraLabels: {cis.f5.com/as3-tenant: Nginx_IC, cis.f5.com/as3-app: Nginx_IC_vs , cis.f5.com/as3-pool: Nginx_IC_pool}
+      #extraLabels: {cis.f5.com/as3-tenant: Nginx_IC, cis.f5.com/as3-app: Nginx_IC_vs , cis.f5.com/as3-pool: Nginx_IC_pool}
+      extraLabels: {cis.f5.com/as3-tenant: vcptoisp001l, cis.f5.com/as3-app: vcptoisp001l_vs , cis.f5.com/as3-pool: vcptoisp001l}
       #customPorts: [{name: readiness-port,port: 8081, protocol: TCP}]
     #reportIngressStatus:
     #  enable: true
