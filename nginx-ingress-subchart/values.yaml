@@ -2,6 +2,7 @@ nginx-ingress:
   controller:
     name: controller
     nginxplus: true
+    enableOIDC: true
     image:
       repository: aditidoc/nginx-plus-ingress
       tag: "3.6.1-SNAPSHOT"
