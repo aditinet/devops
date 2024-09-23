@@ -5,4 +5,4 @@ nginx-ingress:
     enableOIDC: true
     image:
       repository: aditidoc/nginx-plus-ingress
-      tag: "3.6.1-SNAPSHOT"
+      tag: 3.6.1-SNAPSHOT
