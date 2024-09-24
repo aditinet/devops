@@ -9,4 +9,4 @@ f5-bigip-ctlr:
     log_level: debug
     hubmode: true
     agent: as3
-  version: 2.7.1
+  version: 2.18.0
