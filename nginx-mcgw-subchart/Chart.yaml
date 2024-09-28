@@ -6,4 +6,4 @@ appVersion: "1.16.0"
 dependencies:
 - name: mcgw
   version: 0.1.0
-  repository: "http://172.28.255.231/stable"
+  repository: "http://172.28.255.204/stable"
