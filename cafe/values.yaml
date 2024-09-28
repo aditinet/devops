@@ -1,1 +1,18 @@
-
+cafe:
+ ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: cafe.example.com
+      paths:
+        - path: /cafe
+          pathType: ImplementationSpecific
+        - path: /tea
+          pathType: ImplementationSpecific
+  tls:
+    - secretName: cafe-secret
+      hosts:
+        - cafe.example.com
