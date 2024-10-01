@@ -14,7 +14,7 @@ nginx-ingress:
       tag: 3.6.1-SNAPSHOT
     config:
       #entries: { proxy-protocol: "True" ,real-ip-header: "proxy_protocol",set-real-ip-from: "0.0.0.0/0"}
-      entries: {resolver-addresses: "8.8.8.8"}
+      #entries: {resolver-addresses: "8.8.8.8"}
     service:
       type: NodePort
       #extraLabels: { app: ingresslink }
