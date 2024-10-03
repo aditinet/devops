@@ -1,7 +1,7 @@
 nginx-ingress:
   prometheus:
     service:
-      create: true
+      create: false
   controller:
    # config:
    #   entries:
