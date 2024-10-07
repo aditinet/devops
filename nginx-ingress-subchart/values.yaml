@@ -8,6 +8,7 @@ nginx-ingress:
    #     proxy-protocol: "True"
    #     real-ip-header: "proxy_protocol"
    #     set-real-ip-from: "0.0.0.0/0"
+    replicaCount: 2
     nginxplus: true
     image:
       repository: aditidoc/nginx-plus-ingress
