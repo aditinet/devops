@@ -18,6 +18,8 @@ nginx-ingress:
       #entries: {resolver-addresses: "8.8.8.8"}
     service:
       type: NodePort
+    nginxStatus:
+       allowCidrs: "0.0.0.0/0"
       #extraLabels: { app: ingresslink }
       #extraLabels: {cis.f5.com/as3-tenant: Nginx_IC, cis.f5.com/as3-app: Nginx_IC_vs , cis.f5.com/as3-pool: Nginx_IC_pool}
       #extraLabels: {cis.f5.com/as3-tenant: vcptoisp002l, cis.f5.com/as3-app: vcptoisp002l_vs , cis.f5.com/as3-pool: vcptoisp002l_pool}
